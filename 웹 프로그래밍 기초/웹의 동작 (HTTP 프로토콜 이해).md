@@ -73,7 +73,7 @@ http://www.sunnyvale.co.kr/docs/index.html
 
 <br/>
 
-###생각해보기
+#### 생각해보기
 
    - HTTP에 S가 붙은 HTTPS 는 어떤 용도로 사용되는 건가요? HTTP와 무엇이 다른가요?
 
