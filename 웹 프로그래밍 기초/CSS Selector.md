@@ -10,7 +10,7 @@
 
    - 트리구조로 되어있는 selector를 속성과 테그이름으로 빠르게 찾는 방법
 
-###CSS Selector의 다양한 활용
+   CSS Selector의 다양한 활용
 
    - id, class 요소 선택자와 함께 활용  
 
