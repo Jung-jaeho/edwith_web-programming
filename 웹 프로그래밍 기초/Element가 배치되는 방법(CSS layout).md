@@ -61,6 +61,37 @@ absolute가 static 박스의 왼쪽 맨위부터 시작을 한다. 그래서 오
 
 하지만 여기서 부모중에 static이 없으면 body를 기준점으로 잡니다.
 
+### float
+
+float 속성으로 원래 flow에서 벗어날 수 있고 둥둥 떠다닐 수 있습니다.
+일반적인 배치에 따라서 배치된 상태에서 float는 벗어난 형태로 특별히 배치됩니다.
+따라서 뒤에 block엘리먼트가 float 된 엘리먼트를 의식하지 못하고 중첩돼서 배치됩니다.
+float의 속성은 이런 특이성 때문에 웹사이트의 전체 레이아웃 배치에서 유용하게 활용됩니다.
+
+![float](./img/float.png)
+
+### box-sizing과 padding
+
+padding 속성을 늘리면 엘리먼트의 크기가 달라질 수 있습니다.
+box-sizing 속성으로 이를 컨트롤 할 수 있습니다.
+box-sizing 속성을 border-box로 설정하면 엘리먼트의 크기를 고정하면서 padding 값만 늘릴 수 있습니다
+
+padding값을 늘렸는데 왜 div가 커질까? padding안에 간격을 넓였는데 왜 간격이 커지지?
+기본적인 레이아웃을 할떄 속성이 있다. 그럴경우 box-sizing을 border-box로 바꿔주면 된다.
+즉 box-size가 padding에 의해서 커질 수가 있다.
+
+![padding](./img/padding.png)
+
+padding값이 커지면 box-content만 커진다.
+
+
+   - 정리
+전체 레이아웃은 float를 잘 사용해서 2단, 3단 컬럼 배치를 구현합니다.
+최근에는 css-grid나 flex 속성 등 layout을 위한 속성을 사용하기 시작했으며 브라우저 지원범위를 확인해서 사용하도록 합니다.
+특별한 위치에 배치하기 위해서는 position absolute를 사용하고, 기준점을 relative로 설정합니다.
+네비게이션과 같은 엘리먼트는 block 엘리먼트를 inline-block으로 변경해서 가로로 배치하기도 합니다.
+엘리먼트안의 텍스트의 간격과 다른 엘리먼트간의 간격은 padding과 margin 속성을 잘 활용해서 위치시킵니다.
+
 -참고자료-
 부스트코스 - 웹프로그래밍
 
