@@ -92,6 +92,29 @@ padding값이 커지면 box-content만 커진다.
 네비게이션과 같은 엘리먼트는 block 엘리먼트를 inline-block으로 변경해서 가로로 배치하기도 합니다.
 엘리먼트안의 텍스트의 간격과 다른 엘리먼트간의 간격은 padding과 margin 속성을 잘 활용해서 위치시킵니다.
 
+
+~~~
+<div class="left">
+</div>
+<div class="right">
+</div>
+~~~
+이 두개를 화면 오른쪽 왼쪽에 두려면?
+1. float를 사용한다. (float :left) -> 이렇게 하면 footer가 맨위로 올라간다.
+2. footer 맨위로 방지하기 위해서 clear :left; 코드를 써준다.
+3. 그러면 footer는 다시 제자리로 돌아온다.
+4. left를 width를 가변폭으로 20% 일단 줘본다.그러면 옆으로 밀리는것을 확인할 수 있다.
+5. right를 width를 80%로 줘본다.
+6. wrap 자식이 overflow :auto를 준다. (자식으로 인식을 시킨다 그러면 뒤에 색이 보여진다.)
+7. 
+  
+   - overflow : hidden
+  overflow 의 값을 hidden 으로 설정하면, 부모요소의 범위를 넘어가는 자식요소의 부분은 보이지 않도록 처리 합니다.
+   - overflow : auto  
+   overflow 의 값을 auto 로 설정할 경우 부모요소의 범위를 넘어가는 자식요소의 부분이 있을 경우 해당 부분을 보이지 않도록 처리하고, 사용자가 해당 부분을 확인 할 수 있도록 스크롤바를 표시 합니다.
+
+![emoticon](./img/emoticon.png)
+
 -참고자료-
 부스트코스 - 웹프로그래밍
 
